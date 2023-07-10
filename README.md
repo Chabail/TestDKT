@@ -5,7 +5,6 @@ Plan: \
 10/07/2023: \
 
 Importer l'ensemble du code sur mon dépôt Github \
-Lier le Github à CloudBuild qui servira pour la CI/CD (Terraform ou console) \
 Travailler sur l'infra avec Terraform pour mettre un K8s permettant de gérer la disponibilité et la scalabilité \
 
 11/07/2023: \
