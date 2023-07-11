@@ -1,7 +1,6 @@
 # TestDKT
-A fond le chien!
-README.md
-TestDKT
+A fond le chien! \
+TestDKT \
 Plan: \
 
 10/07/2023: 
