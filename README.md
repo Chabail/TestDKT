@@ -14,6 +14,6 @@ Continuer à travailler sur l'infra et la rendre stable
 Réfléchir sur les environnements de dev / prod / pre prod
 Réfléchir sur la BDD adéquate afin de supporter les 100 000 client simultanés \
 
-12/07/2023 :
+12/07/2023 : \
 Terraformer l'observabilité et le monitoring
 Voir pour les DNS en fonction du déploiement
