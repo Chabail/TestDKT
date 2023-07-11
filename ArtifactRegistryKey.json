@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "bailleul-charles",
+  "private_key_id": "c06e69f4306692135de8e96d2c562614ef980db3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDMZ0+fyVjd6dSs\ni5+c0JHfcqI0XROzmcwNq4Vj92r+nHaJuwQoOr3r8jPVERC1ksfaYXV+A9N5/RGA\nIM611VOyp58BD1IESd5/jYPc5kAfm/M8G1CJym/Rt2pkWmz3f6PCIGLELiKtA0qf\nIbtBhhi7NbMIcPVpluhJYM0RZcqXVfPLp4Wnysan0UJQhCkWToAP+noiTMSDWweq\nDa9cMqp3oGvpD65fe3BVWar4FS12ziE5w8kx3zBlwhFxvQ3Ui3qQCovLAC8Ir7zp\n4/51ZYqncZxsa5OF6v5wehrp3w8BoA95CpPc8VA/WfDa7E8SlryHYxCHeWCgamZf\nj7Jlf6stAgMBAAECggEABjLl38cn6kbym676TrOmkNu1npfqBorV/N4kQ/VXadRN\n5fxlcmDhrJuiRcZoNtF2PSGygflUuwDZPIUCL9KB4Mujj1ErIBUrabvdcWAMNskw\ndbSwWxVoEbiZweRaJKFa0oLP6/ooNA4C/9NyjdimvFqzDMD8OFEKx1rnrSzkmXVE\nb+6zVlEZpo8Ec7oYdO/mRwmKoQuAkf/jm4Z5Fli1BC0zScbpHBltL/AYmhsifUiK\nxlvNJp2wl23oI5oOazET4EZideUFShGhaf8Hv38icmhQAnfSYQqPsALPnoufovu9\nTAwS5aBOmYuUd9IaB+yAawGKio8DjQuB5uK8MMWj0QKBgQD1w720YnwgOyY8d+LT\nOFrs3M8/tq7k6Q018FRxzxxU9ZdGMASX/+vBztLu1y8JvxugaaLtOvFCRqgya39E\n1nb9shKdDYJXHalffkQzmzTVBRD8wfx5ZCXSYvAKCjCOE2icO7YLQ4cgFD7yqJ5W\nvchDO4LysLcs1Xu2PvZjU5z7eQKBgQDU6perZlqRmh1V/vGOqnKtjHQ9PjItdxS+\nrGHEbuiwt4a8nu9HtE9vfi6QDRjP4ERNj7dNY1bhKUbhNoSgEKDgY1ABQI2ZLbEZ\nIy20PlnvNGivR4iPjirVjQ518JaWO+bpMCTyhAHDN+X869bYMO4dpo84jZcaWJxC\ndq/3/yqMVQKBgHXKqnrxlRKRpwLmZwXbheDu+DpOYcb/WECY/rBJlwe1ahrO2vTL\nSYDrkze8VSQzv5cD6n4PeSDN4sG/uhERRZjUp400s1rzsYE+cIvXgNv0gK7UfyDj\neik7GFeHiLwf20y+ZcNCS1p5ua3uWW2zqm9m751IS5MmgxPXW5pBsgTpAoGAeSrI\nBZLKF/JMn5Pmg/ocKQe1XuT2SUlrVNdlDBTR9z96Pf10zqmeSyTT+sZ5SFOoizsu\nZawS1TBYVfJgp3bPFuNttEi4TGPkVRnf+KNDKw34RUfAP3H4jm8nu5afHAAa+Lmd\nTSYympZFHBpauc2etOEEwHpTc3rZ8jj5C3j7DcECgYBZYq7yVEe5PmoUMNUvJvGn\nrnhE2kD54Sed3ljpWkEYBDk9oniF8lyg67Du9av1b0HjgJs/E1dYbBR8kvLaCAK2\n0dbjMbsSDK3hHzeMWKTV8YQUQNsDaleDf1s3IOqp+dj2GrkvWand/bn8cmVSfHG9\nN2V5coFfH+pNf/9C72voLA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "registrypull@bailleul-charles.iam.gserviceaccount.com",
+  "client_id": "108768741291993225201",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/registrypull%40bailleul-charles.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
