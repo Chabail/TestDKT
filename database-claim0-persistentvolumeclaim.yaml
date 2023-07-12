@@ -5,6 +5,7 @@ metadata:
   labels:
     io.kompose.service: database-claim0
   name: database-claim0
+  namespace: spring-petclinic
 spec:
   accessModes:
     - ReadWriteOnce
