@@ -225,7 +225,7 @@ spec:
             - containerPort: 3306
           resources:
             limits:
-              memory: "536870912"
+              memory: "53687091"
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: database-claim0
