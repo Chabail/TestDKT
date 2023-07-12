@@ -84,9 +84,6 @@ spec:
           name: api-gateway
           ports:
             - containerPort: 8080
-          resources:
-            limits:
-              memory: "536870912"
       restartPolicy: Always
 status: {}
 
@@ -118,16 +115,13 @@ spec:
       imagePullSecrets:
         - name: gcr-json-key
       containers:
-        - env:
+          env:
             - name: spring.datasource.url
               value: jdbc:mysql://database:3306
           image: springcommunity/spring-petclinic-config-server
           name: config-server
           ports:
             - containerPort: 8888
-          resources:
-            limits:
-              memory: "536870912"
       restartPolicy: Always
 status: {}
 
@@ -166,18 +160,16 @@ spec:
               "-timeout=60s",
               "--",
               "java",
-              "org.springframework.boot.loader.JarLauncher",
-              "--spring.profiles.active=mysql",
+              "org.springframework.boot.loader.JarLauncher"
             ]
           env:
             - name: SPRING_PROFILES_ACTIVE
-              value: "docker,mysql"
+              value: "docker"
+            - name: CONFIG_SERVER_URL
+              value: http://config-server:8888
           image: springcommunity/spring-petclinic-customers-service
           ports:
             - containerPort: 8081
-          resources:
-            limits:
-              memory: "536870912"
       restartPolicy: Always
 
 ---
@@ -223,9 +215,6 @@ spec:
           name: database
           ports:
             - containerPort: 3306
-          resources:
-            limits:
-              memory: "536870912"
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: database-claim0
@@ -274,9 +263,6 @@ spec:
             - org.springframework.boot.loader.JarLauncher
           ports:
             - containerPort: 8761
-          resources:
-            limits:
-              memory: "536870912"
       restartPolicy: Always
 
 ---
@@ -306,9 +292,6 @@ spec:
           name: grafana-server
           ports:
             - containerPort: 3000
-          resources:
-            limits:
-              memory: "268435456"
       restartPolicy: Always
 status: {}
 
@@ -347,9 +330,6 @@ spec:
             - name: prometheus-config-volume
               mountPath: /etc/prometheus/prometheus.yml
               subPath: prometheus.yml
-          resources:
-            limits:
-              memory: "268435456"
       restartPolicy: Always
 
 ---
@@ -389,9 +369,6 @@ spec:
           name: tracing-server
           ports:
             - containerPort: 9411
-          resources:
-            limits:
-              memory: "536870912"
       restartPolicy: Always
 status: {}
 
