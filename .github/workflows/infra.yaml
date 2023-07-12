@@ -1,10 +1,6 @@
 name: Terraform Apply
 
 on:
-  # workflow_run:
-  #   workflows: ["Docker Build and Push"]
-  #   types:
-  #     - completed
   push:
     branches: ["master", "main"]
 
@@ -23,7 +19,19 @@ jobs:
         run: echo '${{ secrets.GCP_CREDENTIALS }}' > credentials.json
         shell: bash
 
+      - name: Check if cluster exists
+        id: cluster_exists
+        run: |
+          if terraform show -no-color | grep -q 'google_container_cluster.app-cluster'; then
+            echo "Cluster already exists. Skipping Terraform init."
+            echo "::set-output name=cluster_exists::true"
+          else
+            echo "Cluster does not exist. Proceeding with Terraform init."
+            echo "::set-output name=cluster_exists::false"
+          fi
+
       - name: Terraform Init
+        if: steps.cluster_exists.outputs.cluster_exists == 'false'
         run: terraform init
 
       - name: Terraform Validate
@@ -31,6 +39,17 @@ jobs:
 
       - name: Terraform Plan
         run: terraform plan
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if terraform plan | grep -q 'No changes'; then
+            echo "No changes found in Terraform plan. Skipping apply."
+            echo "::set-output name=has_changes::false"
+          else
+            echo "Changes found in Terraform plan. Proceeding with apply."
+            echo "::set-output name=has_changes::true"
+          fi
 
 
       - name: Terraform Apply

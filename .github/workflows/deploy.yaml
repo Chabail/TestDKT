@@ -1,9 +1,10 @@
 name: Deploy to Kubernetes
 
 on:
-  push:
-    branches: [main, master]
-
+  workflow_run:
+    workflows: "Terraform Apply"
+    types:
+      - completed
 jobs:
   deploy:
     runs-on: ubuntu-latest
