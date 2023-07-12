@@ -20,7 +20,7 @@ jobs:
         uses: hashicorp/setup-terraform@v1
 
       - name: Setup Google Cloud credentials
-        run: echo '${{ secrets.GCP_CREDENTIALS }}' > creds.json
+        run: echo '${{ secrets.GCP_CREDENTIALS }}' > credentials.json
         shell: bash
 
       - name: Terraform Init
