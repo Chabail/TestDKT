@@ -1,0 +1,48 @@
+name: Terraform Apply
+
+on:
+  # workflow_run:
+  #   workflows: ["Docker Build and Push"]
+  #   types:
+  #     - completed
+  push:
+    branches: ["master", "main"]
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+
+      - name: Setup Google Cloud credentials
+        run: echo '${{ secrets.GCP_CREDENTIALS }}' > creds.json
+        shell: bash
+
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform Validate
+        run: terraform validate
+
+      - name: Terraform Plan
+        run: terraform plan
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if terraform plan | grep -q 'No changes'; then
+            echo "No changes found in Terraform plan. Skipping apply."
+            echo "::set-output name=has_changes::false"
+          else
+            echo "Changes found in Terraform plan. Proceeding with apply."
+            echo "::set-output name=has_changes::true"
+          fi
+
+      - name: Terraform Apply
+        if: steps.changes.outputs.has_changes == 'true'
+        run: terraform apply -auto-approve
